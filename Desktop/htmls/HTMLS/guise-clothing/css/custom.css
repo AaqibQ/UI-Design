@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/***** General CSS *****/
+
+body {
+  word-break: break-word;
+  font: 14px/25px 'Myriad Pro Regular', sans-serif;
+  color: #000000;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  white-space: initial;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #393939;
+}
+
+a:hover {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+}
+ul.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu > li >a {
+    padding: 0 15px;
+}
+a.logo {
+    font-family: 'monbaiti';
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+}
+ul.menu.jcr {
+    justify-content: right;
+}
+.notice {
+    text-align: center;
+    padding: 6px 0;
+    background: #ebebeb;
+}
+.banner-bg {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    height: 857px;
+    margin-top: 20px;
+    box-shadow: inset 0 0 0 0px #fff;
+    animation: banner 1.5s;
+    text-align: center;
+}
+@keyframes banner{
+  0%{
+    box-shadow: inset 0 0 0 0px #fff;
+  }
+  0%{
+    box-shadow: inset 0 0 0 430px #fff; 
+  }
+  100%{
+    box-shadow: inset 0 0 0 0px #fff;
+  }
+}
+.content-banner {
+    padding: 60px 0px 0 70px;
+    text-align: left;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'monbaiti';
+}
+
+.text1 {
+  /* letter-spacing: 8px; */
+  /* margin-bottom: 20px; */
+  position: relative;
+  animation: text 4s 1;
+  animation-name: text;
+  animation-duration: 4s;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes text {
+  0% {
+    color: black;
+    margin-bottom: -40px;
+  }
+  30% {
+    letter-spacing: 5px;
+    margin-bottom: -40px;
+  }
+  85% {
+    letter-spacing: 0px;
+    margin-bottom: -40px;
+  }
+  100% {
+    margin-bottom: 20px;
+  }
+}
+.ball {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* border: 3px solid black; */
+  border-radius: 50%;
+  pointer-events: none;
+  background-image: url(../images/smart-shoe.png);
+  background-size: contain;
+}
+img#tilt {
+    width: 81%;
+    margin: auto;
+    position: absolute;
+    left: 50px;
+    right: 0;
+    top: 25px;
+    animation: blur 2s;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+@keyframes blur{
+  0%{filter: blur(3px);opacity: 1;}
+  100%{filter: blur(1px) contrast(1.1);;opacity: 1;}
+}
+section.fold1 {
+    padding: 50px 0;
+}
+.img-box {
+    height: 515px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #ebebeb;
+}
+.haeding {
+    margin: 0 0 50px;
+}
+h5 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.prd-det p {
+    visibility: none;
+    transition: 0.3s all;
+}
+
+.prd-box:hover .prd-det p {
+    visibility: visible;
+}
+
+.prd-box {
+    height: 544px;
+    overflow: hidden;
+}
+
+.prd-box:hover .prd-det {
+    transform: translateY(-160px);
+    background: white;
+    padding: 30px;
+    box-shadow: 0 -9px 10px 1px #0000003b;
+    border-radius: 0 220px 0px 0px;
+}
+
+.prd-det {
+    transition: 0.3s all;
+}
+
+.prd-box:hover .img-box img {
+    transform: scale(0.8);
+}
+
+.img-box > img {
+    transition: 0.3s all;
+}
+.prd-box:hover .prd-det h5 {
+    font-size: 20px;
+}
+.haeding > h1 {
+    line-height: 0.8;
+}
+.pdr-cont h5 {
+    margin-bottom: 0;
+}
+
+.pdr-cont a {
+    color: black;
+    font-size: 16px;
+}
+.prd-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.prd-bx2 {
+    flex-basis: 19%;
+    width: 19%;
+    margin-right: 1%;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.prd-bx2 > .img-bx img {
+    width: 100%;
+    height: 466px;
+    object-fit: cover;
+    transition: 0.3s all;
+}
+
+.prd-bx2:hover >.img-bx img {transform: scale(1.2) rotate(5deg);}
+.img-bx {
+    overflow: hidden;
+}
+.btn-1 {
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 130px;
+    background: #000;
+    color: #ebebeb;
+    font-size: 16px;
+    transition: 0.3s all;
+}
+section.fold2 {
+    padding: 0 0 100px;
+}
+.btn-1:hover {
+    box-shadow: inset 0 -50px 0px 10px #bdbdbd;
+}
+form.newslatter > input {
+    border: none;
+    width: 100%;
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+
+form.newslatter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form.newslatter button {
+    width: 28%;
+    border: none;
+    border-bottom: 3px solid #000;
+    background: transparent;
+}
+form.newslatter > input::placeholder {
+    color: #000;
+    font-weight: 500;
+}
+ul.footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.copyright-sec {
+    padding: 30px 0;
+}
+
+.copyright-sec p {
+    margin: 0;
+    font-size: 16px;
+}
+
+ul.footer-menu > li > a {
+    padding: 0 20px;
+}
+section.afold1 img {
+    float: right;
+    margin: 30px;
+    margin-right: 0;
+    width: 60vw;
+}
+
+h2 {
+    font-size: 60px;
+    font-family: 'monbaiti';
+    color: #000;
+    text-transform: capitalize;
+}
+
+section.afold1 {
+    padding: 50px 0;
+}
+.img-prg {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.img-prg > img {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    background: #e2e2e2;
+    margin-right: 10px;
+}
+section.cfold1 {
+    padding: 50px 0;
+}
+h3 {
+    font-size: 36px;
+    font-family: 'monbaiti';
+}
+.p-0{padding: 0;}
+.row.cart-tbl hr {
+    border-bottom: 2px solid #000;
+}
+h1.price {
+    padding-top: 15px;
+    padding-bottom: 29px;
+}
+.input-nmbr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 210px;
+    margin: auto;
+    background: #cccccc;
+    border-radius: 6px;
+    padding: 0 20px;
+    margin-top: 29px;
+    margin-bottom: 43px;
+}
+
+.input-nmbr input {
+    width: 60px;
+    height: 40px;
+    outline: none;
+    color: #06244b;
+    text-align: center;
+    font-weight: 900;
+    background: #cccccc00;
+    border: none;
+}
+
+.input-nmbr > div {
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #00000000;
+    color: black;
+    font-size: 16px;
+    user-select: none;
+    cursor: none;
+    transition: 0.5s all;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-nmbr > div:hover {
+    background: #000000;
+    color: #fff;
+}
+.plus {
+    font-size: 12px !important;
+}
+.row.cart-tbl > .col-md-5 h3 {padding-left: 60px;}
+body * {
+    cursor: none;
+}
+a.btn-white {
+    margin-left: 60px;
+    height: 50px;
+    padding: 0 40px;
+    background: #000;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-family: 'monbaiti';
+    font-size: 18px;
+    border: 1px solid transparent;
+}
+
+a.btn-black {
+    height: 50px;
+    padding: 0 40px;
+    background: #fff;
+    border: 1px solid #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'monbaiti';
+    font-size: 18px;
+}
+a.btn-black > img {
+    transition: 0.3s all;
+    margin-right: 10px;
+}
+a.btn-black:hover {
+    background: #000;
+    color: #fff;
+}
+
+a.btn-black:hover img {filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(254deg) brightness(104%) contrast(106%);transform: rotate(360deg);}
+a.btn-white:hover {
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+}
+section.chfold1 {
+    padding: 50px 0 100px;
+}
+.checkout-box {
+    padding: 50px;
+    border: 1px solid #000;
+    padding-bottom: 20px;
+    margin: 50px 0px 0 20px;
+}
+
+.bx-title {
+    font-size: 30px;
+    margin: 0px 0 20px;
+    font-family: 'monbaiti';
+    font-weight: 500;
+}
+
+.checkout-box input:not(input[type=check]) {
+    height: 60px;
+    padding: 0 10px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 0;
+    outline: none;
+    font-family: 'monbaiti';
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.checkout-box input:not(input[type=check])::placeholder {
+    color: #000;
+}
+.order-headins {
+    font-family: 'monbaiti';
+    font-size: 26px;
+}
+
+.order-det-box hr {
+    opacity: 0.5;
+    width: 110%;
+    position: relative;
+    left: -5%;
+}
+
+.order-det-box {
+    padding: 50px;
+    border: 1px solid #000;
+    padding-bottom: 20px;
+    margin: 50px 50px 0 20px;
+}
+
+.under-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.order-headins2 {
+    font-family: 'monbaiti';
+    font-size: 18px;
+}
+.under-product.sub-total > div {
+    font-weight: bold;
+}
+.checkbxx {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: monbaiti\;
+}
+
+.checkbxx input {
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+}
+.under-product.bdr-po {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px 25px;
+    margin: 40px 0;
+    width: 110%;
+    position: relative;
+    left: -5%;
+}
+.radiobtn {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+
+.bank-det {
+    font-family: 'monbaiti';
+    font-size: 18px;
+}
+
+.radiobtn input {
+    height: 20px;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.radiobtn input:before {
+    position: absolute;
+    background: black;
+    content: '';
+    border-radius: 50%;
+    top: 2px;
+    left: -1px;
+    border: 5px solid #0000;
+    height: 15px;
+    width: 15px;
+}
+
+.radiobtn input:checked::before {
+    background: #fff;
+    border-color: #000;
+}
+button.btn-black {
+    width: 110%;
+    height: 60px;
+    font-size: 24px;
+    font-family: onbaiti;
+    background: #000;
+    color: #fff;
+    position: relative;
+    left: -5%;
+}
+.shop-heading {
+    padding: 35px 0px;
+    border-bottom: 2px solid #000;
+}
+.filter-title {
+    font-size: 46px;
+    font-family: 'monbiati';
+    color: #000;
+    margin-bottom: 15px;
+}
+.cs-heading {
+    font-size: 24px;
+    font-family: 'monbaiti';
+    color: #000;
+    margin-bottom: 10px;
+}
+.size-flex > div {
+    height: 50px;
+    width: 50px;
+    background: #ebebeb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #c8c8c8;
+    font-weight: 100;
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+.size-flex {
+    display: flex;
+    align-items: center;
+}
+.color-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: wrap;
+    width: 90%;
+}
+
+.color-flex > div {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.color-flex .active,.color-flex > div:hover {
+    border: 5px solid #fff;
+}
+span.listh {
+    display: block;
+    line-height: 1;
+    color: #666666;
+    margin: 25px 0;
+    font-size: 16px;
+}
+section.prdfold1 {
+    padding: 50px 0;
+}
+.prd-img-main {
+    height: 700px;
+    padding: 80px;
+    width: 80%;
+    background: #ebebeb;
+    text-align: center;
+}
+
+.prd-img-main img {
+    width: 80%;
+}
+
+.flex-prd-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.image-to-show > div {
+    width: 67%;
+    padding: 20px;
+    background: #ebebeb;
+    margin: 20px auto;
+    border: 1px solid #c8c8c8;
+}
+
+.image-to-show > div img {
+    width: 100%;
+}
+
+.image-to-show {
+    width: 20%;
+}
+h5 {
+    font-family: 'monbaiti';
+    font-size: 20px;
+}
+.col-md-6.sd .input-nmbr {
+    margin: 10px 0;
+    width: 80%;
+    height: 50px;
+}
+a.btn-black.cart-nt {
+    margin-top: 10px;
+    width: 80%;
+}
+a.btn-bg-blk {
+    height: 60px;
+    width: 91%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    font-family: 'monbaiti';
+    font-size: 24px;
+    margin-top: 20px;
+}
+.flx-arrow {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.flx-arrow > div {
+    margin-right: 30px;
+}
+
+.flx-arrow > div img {
+    margin-right: 5px;
+}
+.gray-p {
+    font-size: 18px;
+    font-family: 'mombaiti';
+    color: gray;
+    margin: 0px 0 10px;
+}
+
+.visa-card {
+    text-align: center;
+    margin: 20px 0 0px;
+}
+
+.visa-card img {
+    width: 20%;
+}
+.nav-link {
+    border: none;
+    font-size: 18px;
+    font-family: 'monbaiti';
+    margin: 10px 40px 10px 0;
+    cursor: none !important;
+    padding-left: 0;
+}
+
+.nav-link.active {
+    border: none;
+    background: transparent !important;
+    border-bottom: 3px solid #000 !important;
+}
+
+.nav-link:hover {
+    border: none;
+}
+
+div#nav-tab {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #989898;
+}
+
+.nav-tabs .nav-link {
+    color: #000;
+}
+
+/*meeran*/
+
+.login {
+    display: flex;
+    justify-content: center;
+    padding: 35px 0;
+}
+section.mail form {
+    display: grid;
+}
+section.mail input {
+    padding: 10px 16px;
+    margin: 11px 0;
+    background: #80808021;
+    border: 1px solid gainsboro;
+    font-family: 'monbaiti';
+    height: 55px;
+    text-transform: capitalize;
+}
+section.mail h3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    color: black;
+    text-transform: capitalize;
+}
+p.pera {
+    padding: 10px 37px;
+    font-size: 20px;
+    font-family: monbaiti;
+}
+.rigester a {
+    color: white;
+    background: black;
+    padding: 15px 263px;
+    font-size: 24px;
+    font-family: 'monbaiti';
+}
+.store a {
+    padding: 20px 253px;
+    font-size: 16px;
+    border: 1px solid;
+    font-family: 'monbaiti';
+}
+.box {
+    padding: 64px 11px;
+    border: 1px solid gainsboro ;
+}
+.store {
+    padding: 20px 0px 0px 1px;
+}
+section.mail {
+    padding: 60px 0 180px;
+}
+.forget {
+    display: flex;
+    justify-content: end;
+}
+.forget a {
+    color: gray;
+    border-bottom: 1px solid;
+    font-size: 19px;
+}
+.blogz {
+    justify-content: center;
+    display: flex;
+}
+.detail {
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+}
+.long img {
+    width: 100%;
+}
+.fold9 h5 {
+    font-size: 22px;
+    color: black;
+    padding: 0px 0 15px 0;
+}
+section.newsz {
+    padding: 38px 20px;
+}
+section.newsz p {
+    color: gray;
+}
+.wrab1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+section.fold3.blg-pg {
+    padding-bottom: 50px;
+}
+footer {
+    padding-top: 50px;
+}
